@@ -1,0 +1,257 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #1e1e1e;
+  color: #fff;
+  overflow: hidden;
+}
+
+.browser-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Вкладки */
+.tabs-bar {
+  display: flex;
+  align-items: center;
+  background-color: #252526;
+  padding: 5px 10px;
+  border-bottom: 1px solid #333;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: #333;
+  border-radius: 5px 5px 0 0;
+  margin-right: 5px;
+  cursor: pointer;
+  min-width: 100px;
+  max-width: 200px;
+  position: relative;
+}
+
+.tab.active {
+  background-color: #1e1e1e;
+  border-bottom: 2px solid #007acc;
+}
+
+.tab-title {
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 15px;
+}
+
+.tab-close {
+  position: absolute;
+  right: 5px;
+  background: none;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  padding: 0;
+}
+
+.new-tab-btn {
+  background: none;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* Адресний рядок */
+.address-bar {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  padding: 5px 10px;
+  border-bottom: 1px solid #444;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.nav-btn:hover {
+  background-color: #444;
+}
+
+.url-input-container {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  background-color: #1e1e1e;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin: 0 10px;
+}
+
+.search-icon {
+  color: #aaa;
+  margin-right: 5px;
+}
+
+.url-input {
+  background: none;
+  border: none;
+  color: #fff;
+  width: 100%;
+  outline: none;
+  font-size: 14px;
+}
+
+.ai-toggle-btn {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.ai-toggle-btn.active {
+  background-color: #007acc;
+  border-color: #007acc;
+}
+
+.ai-toggle-btn span {
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+/* Основна область */
+.main-content {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.webview-container {
+  flex-grow: 1;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+.browser-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* AI Панель */
+.ai-panel {
+  width: 30%;
+  background-color: #252526;
+  border-left: 1px solid #444;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.ai-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 5px;
+}
+
+.ai-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #007acc;
+}
+
+.ai-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  padding-right: 5px;
+}
+
+.message {
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+  max-width: 85%;
+}
+
+.message.user {
+  background-color: #007acc;
+  color: #fff;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.message.ai {
+  background-color: #3e3e42;
+  color: #ddd;
+  align-self: flex-start;
+}
+
+.ai-input-area {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+
+.ai-input-area input {
+  flex-grow: 1;
+  background: none;
+  border: none;
+  color: #fff;
+  outline: none;
+  padding: 5px;
+}
+
+.ai-input-area button {
+  background: none;
+  border: none;
+  color: #007acc;
+  cursor: pointer;
+}
+
+.ai-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.ai-actions button {
+  background-color: #333;
+  border: 1px solid #444;
+  color: #ccc;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.ai-actions button:hover {
+  background-color: #444;
+  color: #fff;
+}
